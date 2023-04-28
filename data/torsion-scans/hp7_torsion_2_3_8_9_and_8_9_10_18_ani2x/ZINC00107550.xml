@@ -1,0 +1,286 @@
+<?xml version="1.0" ?>
+<System openmmVersion="8.0" type="System" version="1">
+	<PeriodicBoxVectors>
+		<A x="2" y="0" z="0"/>
+		<B x="0" y="2" z="0"/>
+		<C x="0" y="0" z="2"/>
+	</PeriodicBoxVectors>
+	<Particles>
+		<Particle mass="12.011"/>
+		<Particle mass="12.011"/>
+		<Particle mass="12.011"/>
+		<Particle mass="15.9994"/>
+		<Particle mass="12.011"/>
+		<Particle mass="14.007"/>
+		<Particle mass="12.011"/>
+		<Particle mass="12.011"/>
+		<Particle mass="14.007"/>
+		<Particle mass="15.9994"/>
+		<Particle mass="12.011"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+		<Particle mass="1.008"/>
+	</Particles>
+	<Constraints/>
+	<Forces>
+		<Force forceGroup="0" name="HarmonicBondForce" type="HarmonicBondForce" usesPeriodic="0" version="2">
+			<Bonds>
+				<Bond d=".15000000000000002" k="192154.38400000002" p1="0" p2="1"/>
+				<Bond d=".1111" k="269449.60000000003" p1="0" p2="11"/>
+				<Bond d=".1111" k="269449.60000000003" p1="0" p2="12"/>
+				<Bond d=".1111" k="269449.60000000003" p1="0" p2="13"/>
+				<Bond d=".13799999999999998" k="334720" p1="1" p2="5"/>
+				<Bond d=".136" k="343088" p1="1" p2="2"/>
+				<Bond d=".1371" k="376560.00000000006" p1="2" p2="3"/>
+				<Bond d=".145" k="305432" p1="2" p2="7"/>
+				<Bond d=".1371" k="376560.00000000006" p1="3" p2="4"/>
+				<Bond d=".132" k="334720" p1="4" p2="5"/>
+				<Bond d=".15000000000000002" k="192154.38400000002" p1="4" p2="6"/>
+				<Bond d=".1111" k="269449.60000000003" p1="6" p2="14"/>
+				<Bond d=".1111" k="269449.60000000003" p1="6" p2="15"/>
+				<Bond d=".1111" k="269449.60000000003" p1="6" p2="16"/>
+				<Bond d=".12760000000000002" k="418400.00000000006" p1="7" p2="8"/>
+				<Bond d=".1504" k="320494.4" p1="7" p2="10"/>
+				<Bond d=".144" k="259408.00000000003" p1="8" p2="9"/>
+				<Bond d=".096" k="456056.00000000006" p1="9" p2="17"/>
+				<Bond d=".1111" k="269449.60000000003" p1="10" p2="18"/>
+				<Bond d=".1111" k="269449.60000000003" p1="10" p2="19"/>
+				<Bond d=".1111" k="269449.60000000003" p1="10" p2="20"/>
+			</Bonds>
+		</Force>
+		<Force forceGroup="1" name="HarmonicAngleForce" type="HarmonicAngleForce" usesPeriodic="0" version="2">
+			<Angles>
+				<Angle a="1.911135530933791" k="460.24" p1="1" p2="0" p3="11"/>
+				<Angle a="1.911135530933791" k="460.24" p1="1" p2="0" p3="12"/>
+				<Angle a="1.911135530933791" k="460.24" p1="1" p2="0" p3="13"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="11" p2="0" p3="12"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="11" p2="0" p3="13"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="12" p2="0" p3="13"/>
+				<Angle a="1.911135530933791" k="460.24" p1="4" p2="6" p3="14"/>
+				<Angle a="1.911135530933791" k="460.24" p1="4" p2="6" p3="15"/>
+				<Angle a="1.911135530933791" k="460.24" p1="4" p2="6" p3="16"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="14" p2="6" p3="15"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="14" p2="6" p3="16"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="15" p2="6" p3="16"/>
+				<Angle a="1.8849555921538759" k="543.9200000000001" p1="8" p2="9" p3="17"/>
+				<Angle a="1.9460421159736774" k="351.456" p1="7" p2="10" p3="18"/>
+				<Angle a="1.9460421159736774" k="351.456" p1="7" p2="10" p3="19"/>
+				<Angle a="1.9460421159736774" k="351.456" p1="7" p2="10" p3="20"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="18" p2="10" p3="19"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="18" p2="10" p3="20"/>
+				<Angle a="1.8919369091618532" k="297.064" p1="19" p2="10" p3="20"/>
+				<Angle a="2.2689280275926285" k="383.2544" p1="0" p2="1" p3="2"/>
+				<Angle a="2.0943951023931953" k="383.2544" p1="0" p2="1" p3="5"/>
+				<Angle a="1.9198621771937625" k="1087.8400000000001" p1="2" p2="1" p3="5"/>
+				<Angle a="1.9495327744776663" k="1087.8400000000001" p1="1" p2="2" p3="3"/>
+				<Angle a="2.2689280275926285" k="383.2544" p1="1" p2="2" p3="7"/>
+				<Angle a="2.1642082724729685" k="383.2544" p1="3" p2="2" p3="7"/>
+				<Angle a="1.8151424220741028" k="1171.52" p1="2" p2="3" p3="4"/>
+				<Angle a="2.0193459445574393" k="1004.1600000000001" p1="3" p2="4" p3="5"/>
+				<Angle a="2.1642082724729685" k="383.2544" p1="3" p2="4" p3="6"/>
+				<Angle a="2.0943951023931953" k="383.2544" p1="5" p2="4" p3="6"/>
+				<Angle a="1.8064157758141308" k="1087.8400000000001" p1="1" p2="5" p3="4"/>
+				<Angle a="2.0420352248333655" k="468.608" p1="2" p2="7" p3="8"/>
+				<Angle a="1.9722220547535922" k="401.664" p1="2" p2="7" p3="10"/>
+				<Angle a="2.155481626212997" k="401.664" p1="8" p2="7" p3="10"/>
+				<Angle a="1.9373154697137058" k="560.6560000000001" p1="7" p2="8" p3="9"/>
+			</Angles>
+		</Force>
+		<Force forceGroup="3" name="HarmonicBondForce" type="HarmonicBondForce" usesPeriodic="0" version="2">
+			<Bonds>
+				<Bond d=".18020000000000003" k="4518.72" p1="11" p2="12"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="11" p2="13"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="12" p2="13"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="14" p2="15"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="14" p2="16"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="15" p2="16"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="18" p2="19"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="18" p2="20"/>
+				<Bond d=".18020000000000003" k="4518.72" p1="19" p2="20"/>
+			</Bonds>
+		</Force>
+		<Force forceGroup="2" name="PeriodicTorsionForce" type="PeriodicTorsionForce" usesPeriodic="0" version="2">
+			<Torsions>
+				<Torsion k="12.552" p1="0" p2="1" p3="2" p4="3" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="12.552" p1="0" p2="1" p3="2" p4="7" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="12.552" p1="0" p2="1" p3="5" p4="4" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="35.564" p1="1" p2="2" p3="3" p4="4" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="6.694400000000001" p1="1" p2="2" p3="7" p4="8" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="6.694400000000001" p1="1" p2="2" p3="7" p4="10" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="58.576" p1="1" p2="5" p3="4" p4="3" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="12.552" p1="1" p2="5" p3="4" p4="6" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="0" p1="2" p2="1" p3="0" p4="11" periodicity="3" phase="0"/>
+				<Torsion k="0" p1="2" p2="1" p3="0" p4="12" periodicity="3" phase="0"/>
+				<Torsion k="0" p1="2" p2="1" p3="0" p4="13" periodicity="3" phase="0"/>
+				<Torsion k="58.576" p1="2" p2="1" p3="5" p4="4" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="35.564" p1="2" p2="3" p3="4" p4="5" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="35.564" p1="2" p2="3" p3="4" p4="6" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="50.208" p1="2" p2="7" p3="8" p4="9" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="1.2552" p1="2" p2="7" p3="10" p4="18" periodicity="3" phase="3.141592653589793"/>
+				<Torsion k="1.2552" p1="2" p2="7" p3="10" p4="19" periodicity="3" phase="3.141592653589793"/>
+				<Torsion k="1.2552" p1="2" p2="7" p3="10" p4="20" periodicity="3" phase="3.141592653589793"/>
+				<Torsion k="58.576" p1="3" p2="2" p3="1" p4="5" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="6.694400000000001" p1="3" p2="2" p3="7" p4="8" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="4.184" p1="3" p2="2" p3="7" p4="10" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k="4.184" p1="3" p2="2" p3="7" p4="10" periodicity="3" phase="0"/>
+				<Torsion k="1.6736000000000002" p1="3" p2="2" p3="7" p4="10" periodicity="6" phase="0"/>
+				<Torsion k=".79496" p1="3" p2="4" p3="6" p4="14" periodicity="3" phase="0"/>
+				<Torsion k=".79496" p1="3" p2="4" p3="6" p4="15" periodicity="3" phase="0"/>
+				<Torsion k=".79496" p1="3" p2="4" p3="6" p4="16" periodicity="3" phase="0"/>
+				<Torsion k="35.564" p1="4" p2="3" p3="2" p4="7" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k=".79496" p1="5" p2="1" p3="0" p4="11" periodicity="3" phase="0"/>
+				<Torsion k=".79496" p1="5" p2="1" p3="0" p4="12" periodicity="3" phase="0"/>
+				<Torsion k=".79496" p1="5" p2="1" p3="0" p4="13" periodicity="3" phase="0"/>
+				<Torsion k="35.564" p1="5" p2="1" p3="2" p4="7" periodicity="2" phase="3.141592653589793"/>
+				<Torsion k=".79496" p1="5" p2="4" p3="6" p4="14" periodicity="3" phase="0"/>
+				<Torsion k=".79496" p1="5" p2="4" p3="6" p4="15" periodicity="3" phase="0"/>
+				<Torsion k=".79496" p1="5" p2="4" p3="6" p4="16" periodicity="3" phase="0"/>
+				<Torsion k=".41840000000000005" p1="7" p2="8" p3="9" p4="17" periodicity="3" phase="0"/>
+				<Torsion k="1.2552" p1="8" p2="7" p3="10" p4="18" periodicity="3" phase="3.141592653589793"/>
+				<Torsion k="1.2552" p1="8" p2="7" p3="10" p4="19" periodicity="3" phase="3.141592653589793"/>
+				<Torsion k="1.2552" p1="8" p2="7" p3="10" p4="20" periodicity="3" phase="3.141592653589793"/>
+				<Torsion k="50.208" p1="9" p2="8" p3="7" p4="10" periodicity="2" phase="3.141592653589793"/>
+			</Torsions>
+		</Force>
+		<Force energy="k*min(dtheta, 2*pi-dtheta)^2; dtheta = abs(theta-theta0);pi = 3.141593;" forceGroup="4" name="CustomTorsionForce" type="CustomTorsionForce" usesPeriodic="0" version="3">
+			<PerTorsionParameters>
+				<Parameter name="k"/>
+				<Parameter name="theta0"/>
+			</PerTorsionParameters>
+			<GlobalParameters/>
+			<EnergyParameterDerivatives/>
+			<Torsions>
+				<Torsion p1="7" p2="2" p3="10" p4="8" param1="502.08000000000004" param2="0"/>
+			</Torsions>
+		</Force>
+		<Force forceGroup="5" name="CMAPTorsionForce" type="CMAPTorsionForce" usesPeriodic="0" version="2">
+			<Maps/>
+			<Torsions/>
+		</Force>
+		<Force alpha="0" cutoff="1" dispersionCorrection="0" ewaldTolerance=".0005" exceptionsUsePeriodic="0" forceGroup="6" includeDirectSpace="1" ljAlpha="0" ljnx="0" ljny="0" ljnz="0" method="0" name="NonbondedForce" nx="0" ny="0" nz="0" recipForceGroup="-1" rfDielectric="78.3" switchingDistance="-1" type="NonbondedForce" useSwitchingFunction="0" version="4">
+			<GlobalParameters/>
+			<ParticleOffsets/>
+			<ExceptionOffsets/>
+			<Particles>
+				<Particle eps=".32635200000000003" q="-.196" sig=".3652684744375391"/>
+				<Particle eps=".20920000000000002" q=".169" sig=".37417746161894255"/>
+				<Particle eps=".20920000000000002" q=".493" sig=".37417746161894255"/>
+				<Particle eps=".50208" q="-.252" sig=".30290556416771536"/>
+				<Particle eps=".08368" q=".232" sig=".39199543598174935"/>
+				<Particle eps=".8368000000000001" q="-.619" sig=".3296325257119256"/>
+				<Particle eps=".32635200000000003" q="-.132" sig=".3652684744375391"/>
+				<Particle eps=".28451200000000004" q=".154" sig=".3723956641826618"/>
+				<Particle eps=".8368000000000001" q="-.305" sig=".3296325257119256"/>
+				<Particle eps=".8037464" q="-.616" sig=".3144872475035398"/>
+				<Particle eps=".32635200000000003" q="-.158" sig=".3652684744375391"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".192464" q=".42" sig=".04000135244450124"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+				<Particle eps=".100416" q=".09" sig=".23876085646161097"/>
+			</Particles>
+			<Exceptions>
+				<Exception eps=".14493801157736366" p1="0" p2="3" q=".049392000000000005" sig=".32072353853052216"/>
+				<Exception eps=".0591706954496903" p1="0" p2="4" q="-.045472000000000005" sig=".3652684744375391"/>
+				<Exception eps=".10910537145347154" p1="0" p2="7" q="-.030184000000000002" sig=".3554685885379954"/>
+				<Exception eps=".09355708417859121" p1="1" p2="6" q="-.022308" sig=".35635948725613575"/>
+				<Exception eps=".41840000000000005" p1="1" p2="8" q="-.051545" sig=".3519049936654341"/>
+				<Exception eps=".09355708417859121" p1="1" p2="10" q="-.026702000000000004" sig=".35635948725613575"/>
+				<Exception eps=".09355708417859121" p1="2" p2="6" q="-.06507600000000001" sig=".35635948725613575"/>
+				<Exception eps=".4100533463831262" p1="2" p2="9" q="-.303688" sig=".34433235456124117"/>
+				<Exception eps=".14493801157736366" p1="2" p2="11" q=".04437" sig=".3064691590402768"/>
+				<Exception eps=".14493801157736366" p1="2" p2="12" q=".04437" sig=".3064691590402768"/>
+				<Exception eps=".14493801157736366" p1="2" p2="13" q=".04437" sig=".3064691590402768"/>
+				<Exception eps=".14493801157736366" p1="2" p2="18" q=".04437" sig=".3064691590402768"/>
+				<Exception eps=".14493801157736366" p1="2" p2="19" q=".04437" sig=".3064691590402768"/>
+				<Exception eps=".14493801157736366" p1="2" p2="20" q=".04437" sig=".3064691590402768"/>
+				<Exception eps=".6481824928212733" p1="3" p2="8" q=".07686" sig=".31626904493982044"/>
+				<Exception eps=".14493801157736366" p1="3" p2="10" q=".039816" sig=".32072353853052216"/>
+				<Exception eps=".22453700202861887" p1="3" p2="14" q="-.02268" sig=".2708332103146632"/>
+				<Exception eps=".22453700202861887" p1="3" p2="15" q="-.02268" sig=".2708332103146632"/>
+				<Exception eps=".22453700202861887" p1="3" p2="16" q="-.02268" sig=".2708332103146632"/>
+				<Exception eps=".15429829603725376" p1="4" p2="7" q=".035728" sig=".3821955500822056"/>
+				<Exception eps=".4879340545606548" p1="5" p2="7" q="-.095326" sig=".3510140949472937"/>
+				<Exception eps=".2898760231547273" p1="5" p2="11" q="-.055709999999999996" sig=".2841966910867683"/>
+				<Exception eps=".2898760231547273" p1="5" p2="12" q="-.055709999999999996" sig=".2841966910867683"/>
+				<Exception eps=".2898760231547273" p1="5" p2="13" q="-.055709999999999996" sig=".2841966910867683"/>
+				<Exception eps=".2898760231547273" p1="5" p2="14" q="-.055709999999999996" sig=".2841966910867683"/>
+				<Exception eps=".2898760231547273" p1="5" p2="15" q="-.055709999999999996" sig=".2841966910867683"/>
+				<Exception eps=".2898760231547273" p1="5" p2="16" q="-.055709999999999996" sig=".2841966910867683"/>
+				<Exception eps=".23400495201597765" p1="7" p2="17" q=".06468" sig=".20619850831358152"/>
+				<Exception eps=".2898760231547273" p1="8" p2="18" q="-.02745" sig=".2841966910867683"/>
+				<Exception eps=".2898760231547273" p1="8" p2="19" q="-.02745" sig=".2841966910867683"/>
+				<Exception eps=".2898760231547273" p1="8" p2="20" q="-.02745" sig=".2841966910867683"/>
+				<Exception eps=".1833814313827875" p1="9" p2="10" q=".097328" sig=".3265143801984344"/>
+				<Exception eps="0" p1="0" p2="1" q="0" sig=".1"/>
+				<Exception eps="0" p1="0" p2="11" q="0" sig=".1"/>
+				<Exception eps="0" p1="0" p2="12" q="0" sig=".1"/>
+				<Exception eps="0" p1="0" p2="13" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="2" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="5" q="0" sig=".1"/>
+				<Exception eps="0" p1="2" p2="3" q="0" sig=".1"/>
+				<Exception eps="0" p1="2" p2="7" q="0" sig=".1"/>
+				<Exception eps="0" p1="3" p2="4" q="0" sig=".1"/>
+				<Exception eps="0" p1="4" p2="5" q="0" sig=".1"/>
+				<Exception eps="0" p1="4" p2="6" q="0" sig=".1"/>
+				<Exception eps="0" p1="6" p2="14" q="0" sig=".1"/>
+				<Exception eps="0" p1="6" p2="15" q="0" sig=".1"/>
+				<Exception eps="0" p1="6" p2="16" q="0" sig=".1"/>
+				<Exception eps="0" p1="7" p2="8" q="0" sig=".1"/>
+				<Exception eps="0" p1="7" p2="10" q="0" sig=".1"/>
+				<Exception eps="0" p1="8" p2="9" q="0" sig=".1"/>
+				<Exception eps="0" p1="9" p2="17" q="0" sig=".1"/>
+				<Exception eps="0" p1="10" p2="18" q="0" sig=".1"/>
+				<Exception eps="0" p1="10" p2="19" q="0" sig=".1"/>
+				<Exception eps="0" p1="10" p2="20" q="0" sig=".1"/>
+				<Exception eps="0" p1="0" p2="2" q="0" sig=".1"/>
+				<Exception eps="0" p1="0" p2="5" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="3" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="4" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="7" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="11" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="12" q="0" sig=".1"/>
+				<Exception eps="0" p1="1" p2="13" q="0" sig=".1"/>
+				<Exception eps="0" p1="2" p2="4" q="0" sig=".1"/>
+				<Exception eps="0" p1="2" p2="5" q="0" sig=".1"/>
+				<Exception eps="0" p1="2" p2="8" q="0" sig=".1"/>
+				<Exception eps="0" p1="2" p2="10" q="0" sig=".1"/>
+				<Exception eps="0" p1="3" p2="5" q="0" sig=".1"/>
+				<Exception eps="0" p1="3" p2="6" q="0" sig=".1"/>
+				<Exception eps="0" p1="3" p2="7" q="0" sig=".1"/>
+				<Exception eps="0" p1="4" p2="14" q="0" sig=".1"/>
+				<Exception eps="0" p1="4" p2="15" q="0" sig=".1"/>
+				<Exception eps="0" p1="4" p2="16" q="0" sig=".1"/>
+				<Exception eps="0" p1="5" p2="6" q="0" sig=".1"/>
+				<Exception eps="0" p1="7" p2="9" q="0" sig=".1"/>
+				<Exception eps="0" p1="7" p2="18" q="0" sig=".1"/>
+				<Exception eps="0" p1="7" p2="19" q="0" sig=".1"/>
+				<Exception eps="0" p1="7" p2="20" q="0" sig=".1"/>
+				<Exception eps="0" p1="8" p2="10" q="0" sig=".1"/>
+				<Exception eps="0" p1="8" p2="17" q="0" sig=".1"/>
+				<Exception eps="0" p1="11" p2="12" q="0" sig=".1"/>
+				<Exception eps="0" p1="11" p2="13" q="0" sig=".1"/>
+				<Exception eps="0" p1="12" p2="13" q="0" sig=".1"/>
+				<Exception eps="0" p1="14" p2="15" q="0" sig=".1"/>
+				<Exception eps="0" p1="14" p2="16" q="0" sig=".1"/>
+				<Exception eps="0" p1="15" p2="16" q="0" sig=".1"/>
+				<Exception eps="0" p1="18" p2="19" q="0" sig=".1"/>
+				<Exception eps="0" p1="18" p2="20" q="0" sig=".1"/>
+				<Exception eps="0" p1="19" p2="20" q="0" sig=".1"/>
+			</Exceptions>
+		</Force>
+		<Force forceGroup="0" frequency="1" name="CMMotionRemover" type="CMMotionRemover" version="1"/>
+	</Forces>
+</System>
