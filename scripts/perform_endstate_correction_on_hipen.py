@@ -1,26 +1,27 @@
+# ------------------------------------------------------------ #
+# This script performs endstate corrections on the HiPen dataset
+# ------------------------------------------------------------ #
+
 # general imports
 from openmm import LangevinIntegrator
 from openmm.app import (
-    PME,
     CharmmParameterSet,
     CharmmPsfFile,
     CharmmCrdFile,
     PDBFile,
     Simulation,
 )
+from openmmml import MLPotential
+import endstate_correction
 from endstate_correction.constant import zinc_systems, blacklist
 from endstate_correction.analysis import plot_endstate_correction_results
-import endstate_correction
 from endstate_correction.protocol import perform_endstate_correction, Protocol
 import mdtraj
-from openmm import unit
 import pickle, sys, os
-from openmmml import MLPotential
 
 ########################################################
 ########################################################
 # ------------------- set up system -------------------#
-package_path = endstate_correction.__path__[0]
 system_idx = int(sys.argv[1])
 system_name = zinc_systems[system_idx][0]
 
@@ -28,13 +29,10 @@ if system_name in blacklist:
     print("System in blacklist. Aborting.")
     sys.exit()
 
-env = "vacuum"
-
-print(system_name)
-print(env)
+print(f"Perfom endstate correction for {system_name}")
 
 # define directory containing parameters
-parameter_base = f"{package_path}/data/hipen_data"
+parameter_base = f"../hipen_systems/"
 # load the charmm specific files (psf, rtf, prm and str files)
 psf_file = f"{parameter_base}/{system_name}/{system_name}.psf"
 crd_file = f"{parameter_base}/{system_name}/{system_name}.crd"
@@ -52,7 +50,7 @@ with open("temp.pdb", "w") as outfile:
 # define region that should be treated with the qml
 chains = list(psf.topology.chains())
 ml_atoms = [atom.index for atom in chains[0].atoms()]
-print(f"{ml_atoms=}")
+print(f"ML atoms: {ml_atoms=}")
 mm_system = psf.createSystem(params=params)
 # define system
 potential = MLPotential("ani2x")
@@ -75,7 +73,9 @@ base = f"{traj_base}/{system_name}_samples_{n_samples}_steps_{n_steps_per_sample
 mm_samples = mdtraj.load_dcd(
     f"{base}.dcd",
     top=psf_file,
-)[1000:]
+)[
+    int((1_000 / 100) * 20) :
+    ]
 print(f"Initializing switch from {len(mm_samples)} MM samples")
 
 # load QML samples
@@ -84,15 +84,17 @@ base = f"{traj_base}/{system_name}_samples_{n_samples}_steps_{n_steps_per_sample
 qml_samples = mdtraj.load_dcd(
     f"{base}.dcd",
     top=psf_file,
-)[1000:]
-print(f"Initializing switch from {len(mm_samples)} QML samples")
+)[
+    int((1_000 / 100) * 20) :
+    ]
+print(f"Initializing switch from {len(qml_samples)} QML samples")
 
 ########################################################
 ########################################################
 # ----------------- perform correction ----------------#
 
 # define the output directory
-output_base = f"../data/{system_name}/switching/"
+output_base = f"../data/switching_results/{system_name}/"
 os.makedirs(output_base, exist_ok=True)
 
 ####################################################
@@ -100,10 +102,10 @@ os.makedirs(output_base, exist_ok=True)
 ####################################################
 fep_protocol = Protocol(
     method="FEP",
-    direction="bidirectional",
     sim=sim,
-    trajectories=[mm_samples, qml_samples],
-    nr_of_switches=1_000,
+    reference_samples=mm_samples,
+    target_samples=qml_samples,
+    nr_of_switches=1_000
 )
 
 ####################################################
@@ -111,13 +113,13 @@ fep_protocol = Protocol(
 ####################################################
 neq_protocol = Protocol(
     method="NEQ",
-    direction="bidirectional",
     sim=sim,
-    trajectories=[mm_samples, qml_samples],
-    nr_of_switches=400,
-    neq_switching_length=5_000,
-    save_endstates=False,
-    save_trajs=False,
+    reference_samples=mm_samples,
+    target_samples=qml_samples,
+    nr_of_switches=100,
+    neq_switching_length=1_000
+    save_endstates=True,
+    save_trajs=True,
 )
 
 # perform correction
@@ -128,5 +130,5 @@ r_neq = perform_endstate_correction(neq_protocol)
 pickle.dump((r_fep, r_neq), open(f"{output_base}/results.pickle", "wb"))
 
 # plot results
-plot_endstate_correction_results(system_name, r_fep, f"{output_base}/results_neq.png")
+plot_endstate_correction_results(system_name, r_fep, f"{output_base}/results_fep.png")
 plot_endstate_correction_results(system_name, r_neq, f"{output_base}/results_neq.png")
