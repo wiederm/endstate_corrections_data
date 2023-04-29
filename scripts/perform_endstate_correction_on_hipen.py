@@ -24,12 +24,13 @@ import pickle, sys, os
 # ------------------- set up system -------------------#
 system_idx = int(sys.argv[1])
 system_name = zinc_systems[system_idx][0]
+env = "vacuum"
 
 if system_name in blacklist:
     print("System in blacklist. Aborting.")
     sys.exit()
 
-print(f"Perfom endstate correction for {system_name}")
+print(f"Perfom endstate correction for {system_name} in {env}")
 
 # define directory containing parameters
 parameter_base = f"../hipen_systems/"
@@ -69,7 +70,7 @@ traj_base = f"../data/equilibrium_samples/{system_name}"
 
 # load MM samples
 mm_samples = []
-base = f"{traj_base}/{system_name}_samples_{n_samples}_steps_{n_steps_per_sample}_lamb_0.0000"
+base = f"{traj_base}/{system_name}_samples_{n_samples}_steps_{n_steps_per_sample}_lamb_0.0000_{env}"
 mm_samples = mdtraj.load_dcd(
     f"{base}.dcd",
     top=psf_file,
@@ -80,7 +81,7 @@ print(f"Initializing switch from {len(mm_samples)} MM samples")
 
 # load QML samples
 qml_samples = []
-base = f"{traj_base}/{system_name}_samples_{n_samples}_steps_{n_steps_per_sample}_lamb_0.0000"
+base = f"{traj_base}/{system_name}_samples_{n_samples}_steps_{n_steps_per_sample}_lamb_1.0000_{env}"
 qml_samples = mdtraj.load_dcd(
     f"{base}.dcd",
     top=psf_file,
